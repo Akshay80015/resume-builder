@@ -1,0 +1,116 @@
+.section-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hamburger-icon {
+  width: 18px;
+  height: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-icon-line {
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger-icon:hover .hamburger-icon-line {
+  background-color: #726f6f;
+}
+
+.hamburger-icon:hover .hamburger-icon-line:first-child,
+.hamburger-icon:hover .hamburger-icon-line:last-child {
+  border-radius: 2px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.info-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.toggle-label {
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-slider::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: #8a4893;
+}
+
+.toggle-checkbox:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+.right-content {
+  display: flex;
+  align-items: center;
+}
+.button-container{
+  float: right;
+}
